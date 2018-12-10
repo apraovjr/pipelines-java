@@ -16,7 +16,32 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
+  <repositories>
+      <!-- Copy this section from the Maven section of the "Connect to Feed" dialog -->
+      <repository>
+          <id>dev-azure-com-csedevops-maven</id>
+          <url>https://pkgs.dev.azure.com/csedevops/_packaging/maven/maven/v1</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+      </repository>
+  </repositories>
+  <distributionManagement>
+      <!-- Copy this section from the Maven section of the "Connect to Feed" dialog -->
+      <repository>
+        <id>dev-azure-com-csedevops-maven</id>
+        <url>https://pkgs.dev.azure.com/csedevops/_packaging/maven/maven/v1</url>
+        <releases>
+          <enabled>true</enabled>
+        </releases>
+        <snapshots>
+          <enabled>true</enabled>
+        </snapshots>
+</repository>
+  </distributionManagement>
   <build>
     <finalName>helloworld</finalName>
     <plugins>
